@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane fx:id="root" prefHeight="375.0" prefWidth="400.0" stylesheets="@../resources/stylesheets/addBook.css" xmlns="http://javafx.com/javafx/8.0.241" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.addMemberController">
+   <children>
+      <AnchorPane fx:id="parentNode" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="375.0" prefWidth="400.0">
+         <children>
+            <Pane layoutX="25.0" layoutY="24.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="350.0" AnchorPane.bottomAnchor="24.399999999999977" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="24.600000000000023" AnchorPane.topAnchor="24.0">
+               <children>
+                  <Label text="Member Details">
+                     <font>
+                        <Font name="Yu Gothic Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="fName" layoutX="10.0" layoutY="40.0" onAction="#addMember" prefHeight="25.0" prefWidth="330.0" promptText="First Name">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Yu Gothic Regular" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="lName" layoutX="10.0" layoutY="80.0" onAction="#addMember" prefHeight="25.0" prefWidth="330.0" promptText="Last Name">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Yu Gothic Regular" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="address" layoutX="10.0" layoutY="120.0" onAction="#addMember" prefHeight="25.0" prefWidth="330.0" promptText="Adress">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Yu Gothic Regular" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="phone" layoutX="10.0" layoutY="160.0" onAction="#addMember" prefHeight="25.0" prefWidth="330.0" promptText="Phone">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Yu Gothic Regular" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="email" layoutX="10.0" layoutY="200.0" onAction="#addMember" prefHeight="25.0" prefWidth="330.0" promptText="Email Adress">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Yu Gothic Regular" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXDialog layoutX="243.0" layoutY="207.0" />
+                  <JFXTextField fx:id="id" maxWidth="0" minWidth="0.0" prefWidth="0" />
+               </children>
+            </Pane>
+            <JFXButton fx:id="addBtn" layoutX="50.0" layoutY="310.0" onAction="#addMember" prefHeight="40.0" prefWidth="135.0"  text="Add Member">
+               <font>
+                  <Font name="Yu Gothic Regular" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="215.0" layoutY="310.0" onAction="#cancel" prefHeight="40.0" prefWidth="135.0" text="Cancel">
+               <font>
+                  <Font name="Yu Gothic Regular" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

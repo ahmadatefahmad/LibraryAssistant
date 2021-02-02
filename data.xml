@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_241" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="classes.IssuedBook">
+    <void property="bookEditionIssued">
+     <string>1</string>
+    </void>
+    <void property="bookID">
+     <int>1</int>
+    </void>
+    <void property="bookIssued">
+     <string>Java Basics</string>
+    </void>
+    <void property="issuanceDate">
+     <string>2021-02-02 13:50:31</string>
+    </void>
+    <void property="memberID">
+     <int>1</int>
+    </void>
+    <void property="memberIssued">
+     <string>Ahmad</string>
+    </void>
+    <void property="memberPhoneIssued">
+     <string>+36</string>
+    </void>
+    <void property="returnDate">
+     <string>2021-02-09 13:50:31</string>
+    </void>
+    <void property="returnedStatus">
+     <int>1</int>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

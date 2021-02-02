@@ -1,0 +1,97 @@
+* {
+    -fx-primary : #2A2E37;
+    -fx-blue : #125880;
+    -fx-primarytext : #B2B2B2;
+    -fx-secondary : #424854 ;
+    -fx-red: #FF0000;
+}
+
+.root{
+
+    -fx-background-color: -fx-primary;
+}
+
+.button{
+    -fx-border-color: -fx-blue;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: -fx-primarytext;
+}
+
+.button:hover{
+  -fx-border-color: -fx-blue;
+    -fx-background-color: -fx-blue;
+     -fx-text-fill: -fx-primary;
+}
+
+.text-field{
+    -fx-text-fill: -fx-primarytext;
+    -fx-font-size : 13pt;
+    -jfx-focus-color: -fx-blue;
+    -fx-prompt-text-fill: gray;
+}
+
+.text-field:hover{
+    -jfx-unfocus-color: -fx-blue;
+
+}
+
+
+
+.label{
+
+    -fx-text-fill: -fx-primarytext;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,.7), 10, 0.12, -1, 2);
+}
+
+.wrong-entry{
+    -jfx-unfocus-color: -fx-red;
+    -jfx-focus-color: -fx-red;
+}
+
+
+/*Combo Box*/
+
+.combo-box{
+    -fx-background-color: -fx-secondary;
+
+}
+.combo-box .list-cell{
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: -fx-primarytext;
+    -fx-padding: 0 0 0 0;
+    -fx-cell-size: 1.66667em;
+}
+
+/*DIALOG BOX*/
+.dialog-box {
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: -fx-primarytext;
+
+}
+
+.dialog-box .label {
+    -fx-text-fill: white;
+
+}
+.dialog-button{
+    -fx-border-color: -fx-blue;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: white;
+    -fx-min-width: 90px;
+    -fx-min-height: 30px;
+}
+.dialog-button:hover{
+    -fx-border-color: -fx-blue;
+    -fx-background-color: -fx-blue;
+    -fx-text-fill: -fx-primary;
+}
+
+.glyph-icon
+{
+
+    -fx-fill: -fx-primarytext;
+}

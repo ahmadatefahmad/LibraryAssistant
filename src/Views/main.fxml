@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane fx:id="root" prefHeight="600.0" prefWidth="900.0" stylesheets="@../resources/stylesheets/mainTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainController">
+    <children>
+        <BorderPane fx:id="borderPane" prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <JFXTabPane prefHeight="50.0" prefWidth="700.0" stylesheets="/resources/stylesheets/mainTheme.css" BorderPane.alignment="CENTER">
+               <tabs>
+                    <Tab closable="false" text="Home">
+                     <content>
+                         <VBox>
+                           <children>
+                              <Text fx:id="loggedUser" fill="#b2b2b2" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="20.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Yu Gothic Regular" size="18.0" />
+                                 </font>
+                              </Text>
+                              <HBox prefHeight="180.0" prefWidth="700.0" styleClass="numReview" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label prefHeight="30.0" prefWidth="800.0" text="Number of Books in the Library" textFill="#b2b2b2" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Yu Gothic Regular" size="30.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Text fx:id="bookNum" fill="#b2b2b2" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="numReview" text="0" HBox.hgrow="NEVER">
+                                       <font>
+                                          <Font name="Yu Gothic Regular" size="72.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="25.0" left="25.0" right="50.0" top="25.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="200.0" prefWidth="700.0" styleClass="numReview" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label prefHeight="30.0" prefWidth="800.0" text="Number of Members Registered" textFill="#b2b2b2">
+                                       <font>
+                                          <Font name="Yu Gothic Regular" size="30.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Text fx:id="memberNum" fill="#b2b2b2" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="numReview" text="0" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets bottom="25.0" left="25.0" right="50.0" top="25.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Yu Gothic Regular" size="72.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="200.0" prefWidth="700.0" styleClass="numReview" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Label prefHeight="30.0" prefWidth="800.0" text="Number of Books Issued" textFill="#b2b2b2">
+                                       <font>
+                                          <Font name="Yu Gothic Regular" size="30.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Text fx:id="issuedNum" fill="#b2b2b2" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="numReview" text="0" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Yu Gothic Regular" size="72.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="25.0" left="25.0" right="50.0" top="25.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="50.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                              <HBox alignment="CENTER" prefHeight="0.0" prefWidth="700.0" VBox.vgrow="NEVER">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#addUser" prefWidth="120.0" styleClass="opBtn" text="Add User">
+                                       <HBox.margin>
+                                          <Insets bottom="20.0" left="5.0" right="5.0" top="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Yu Gothic Regular" size="16.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#editUser" prefWidth="120.0" styleClass="opBtn" text="Edit User" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets bottom="20.0" left="5.0" right="5.0" top="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Yu Gothic Regular" size="16.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#deleteUser" prefWidth="120.0" styleClass="opBtn" text="Delete User">
+                                       <HBox.margin>
+                                          <Insets bottom="20.0" left="5.0" right="5.0" top="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Yu Gothic Regular" size="16.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </Tab>
+                    <Tab closable="false" text="Members">
+                       <content>
+                          <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+                              <children>
+                              <JFXTextField fx:id="searchMember" focusColor="#125880" layoutX="150.0" layoutY="15.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="400.0" promptText="Search">
+                                 <font>
+                                    <Font name="Yu Gothic Regular" size="18.0" />
+                                 </font>
+                              </JFXTextField>
+                                  <TableView fx:id="memberListView" layoutY="50.0" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                                      <columns>
+                                          <TableColumn fx:id="memberID" maxWidth="0" minWidth="0" prefWidth="0" resizable="false" />
+                                          <TableColumn fx:id="fName" maxWidth="300.0" minWidth="50.0" prefWidth="100.0" text="First Name" />
+                                          <TableColumn fx:id="lName" maxWidth="300.0" minWidth="50.0" prefWidth="100.0" text="Last Name" />
+                                          <TableColumn fx:id="address" maxWidth="500.0" minWidth="100.0" prefWidth="150.0" text="Address" />
+                                          <TableColumn fx:id="phone" maxWidth="300.0" minWidth="80.0" prefWidth="125.0" text="Phone Number" />
+                                          <TableColumn fx:id="email" maxWidth="300.0" minWidth="80.0" prefWidth="110.0" text="Email Address" />
+                                          <TableColumn fx:id="rented" maxWidth="120.0" minWidth="40.0" prefWidth="75.0" text="Rented" />
+                                      </columns>
+                                      <contextMenu>
+                                          <ContextMenu>
+                                              <items>
+                                                  <MenuItem mnemonicParsing="false" onAction="#memberDeleteOperation" text="Delete" />
+                                                  <MenuItem mnemonicParsing="false" onAction="#memberEditOperation" text="Edit" />
+                                              </items>
+                                          </ContextMenu>
+                                      </contextMenu>
+                                  </TableView>
+                              </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                          </AnchorPane>
+                       </content>
+                   </Tab>
+                    <Tab closable="false" text="Books">
+                       <content>
+                           <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+                               <children>
+                              <JFXTextField fx:id="searchBook" focusColor="#125880" layoutX="150.0" layoutY="15.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="400.0" promptText="Search">
+                                 <font>
+                                    <Font name="Yu Gothic Regular" size="18.0" />
+                                 </font>
+                              </JFXTextField>
+                                   <TableView fx:id="bookListView" layoutX="-1.0" layoutY="-2.0" prefHeight="550.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                                       <columns>
+                                           <TableColumn fx:id="bookID" maxWidth="0.0" minWidth="0.0" prefWidth="0.0" resizable="false" />
+                                           <TableColumn fx:id="title" maxWidth="500.0" prefWidth="130.0" text="Title" />
+                                           <TableColumn fx:id="author" maxWidth="300.0" prefWidth="130.0" text="Author" />
+                                           <TableColumn fx:id="publisher" maxWidth="300.0" prefWidth="100.0" text="Publisher" />
+                                           <TableColumn fx:id="edition" maxWidth="300.0" prefWidth="75.0" text="Edition" />
+                                           <TableColumn fx:id="category" maxWidth="300.0" minWidth="8.79998779296875" prefWidth="75.0" text="Category" />
+                                           <TableColumn fx:id="copies" maxWidth="300.0" prefWidth="75.0" text="Copies" />
+                                           <TableColumn fx:id="issued" maxWidth="300.0" prefWidth="75.0" text="Issued" />
+                                       </columns>
+                                       <contextMenu>
+                                           <ContextMenu>
+                                               <items>
+                                                   <MenuItem mnemonicParsing="false" onAction="#bookDeleteOperation" text="Delete" />
+                                                   <MenuItem mnemonicParsing="false" onAction="#editBookOperation" text="Edit" />
+                                                   <MenuItem fx:id="showEdition" mnemonicParsing="false" onAction="#showBookEdition" text="Show editions" />
+                                               </items>
+                                           </ContextMenu>
+                                       </contextMenu>
+                                   </TableView>
+                              <Button fx:id="backBtn" contentDisplay="TOP" layoutX="20.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="50.0" minWidth="20.0" mnemonicParsing="false" onAction="#showAllBooks" prefHeight="20.0" prefWidth="49.0" styleClass="pageButton">
+                                 <font>
+                                    <Font name="Yu Gothic Regular" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="29.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/icons/back.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                               </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           </AnchorPane>
+                       </content>
+                    </Tab>
+               </tabs>
+            </JFXTabPane>
+         </center>
+         <left>
+                <VBox prefHeight="568.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addMember" prefHeight="150.0" prefWidth="200.0" styleClass="pageButton" text="Add Member" VBox.vgrow="ALWAYS">
+                            <graphic>
+                                <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../resources/icons/add-member.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="Yu Gothic Regular" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addBook" prefHeight="150.0" prefWidth="200.0" styleClass="pageButton" text="Add Book" VBox.vgrow="ALWAYS">
+                            <graphic>
+                                <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../resources/icons/add-book.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="Yu Gothic Regular" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#issueBook" prefHeight="150.0" prefWidth="200.0" styleClass="pageButton" text="Issue Book" VBox.vgrow="ALWAYS">
+                            <graphic>
+                                <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../resources/icons/issue-book.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="Yu Gothic Regular" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#returnBook" prefHeight="150.0" prefWidth="200.0" styleClass="pageButton" text="Return/Renew Book" VBox.vgrow="ALWAYS">
+                            <graphic>
+                                <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../resources/icons/return.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="Yu Gothic Regular" size="18.0" />
+                            </font>
+                        </Button>
+                    </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+                </VBox>
+         </left>
+        </BorderPane>
+    </children>
+</StackPane>

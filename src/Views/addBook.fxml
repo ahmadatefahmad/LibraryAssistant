@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="375.0" prefWidth="400.0" stylesheets="@../resources/stylesheets/addBook.css" xmlns="http://javafx.com/javafx/8.0.241" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.addBookController">
+   <children>
+      <AnchorPane fx:id="parentNode" layoutX="25.0" layoutY="24.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="350.0" StackPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="375.0" prefWidth="400.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+               <children>
+                  <Label text="Book Details">
+                     <font>
+                        <Font name="Yu Gothic Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="title" layoutX="10.0" layoutY="40.0" onAction="#addBook" prefHeight="25.0" prefWidth="330.0" promptText="Book Title">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Yu Gothic Regular" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="author" layoutX="10.0" layoutY="80.0" onAction="#addBook" prefHeight="25.0" prefWidth="330.0" promptText="Author">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Yu Gothic Regular" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="publisher" layoutX="10.0" layoutY="120.0" onAction="#addBook" prefHeight="25.0" prefWidth="330.0" promptText="Publisher">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Yu Gothic Regular" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="edition" layoutX="10.0" layoutY="160.0" onAction="#addBook" prefHeight="25.0" prefWidth="330.0" promptText="Edition">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Yu Gothic Regular" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="copies" layoutX="10.0" layoutY="200.0" onAction="#addBook" prefHeight="25.0" prefWidth="330.0" promptText="Number of Copies">
+                     <font>
+                        <Font name="Yu Gothic Regular" size="14.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </JFXTextField>
+                  <JFXTextField fx:id="id" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" promptText="Edition">
+                     <font>
+                        <Font name="Yu Gothic Regular" size="14.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </JFXTextField>
+                  <ComboBox fx:id="category" layoutX="10.0" layoutY="250.0" prefHeight="25.0" prefWidth="330.0" promptText="Choose Category" style="-fx-background-color: #424854;" />
+               </children>
+            </Pane>
+            <JFXButton fx:id="addBtn" layoutX="50.0" layoutY="310.0" onAction="#addBook" prefHeight="40.0" prefWidth="135.0" styleClass="jx-button" stylesheets="@../resources/stylesheets/addBook.css" text="Add Book">
+               <font>
+                  <Font name="Yu Gothic Regular" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="215.0" layoutY="310.0" onAction="#cancel" prefHeight="40.0" prefWidth="135.0" styleClass="jx-button" stylesheets="@../resources/stylesheets/addBook.css" text="Cancel">
+               <font>
+                  <Font name="Yu Gothic Regular" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

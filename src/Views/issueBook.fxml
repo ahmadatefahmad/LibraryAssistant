@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.JFXButton?>
+
+<StackPane fx:id="root" prefHeight="600.0" prefWidth="900.0" stylesheets="@../resources/stylesheets/mainTheme.css" xmlns="http://javafx.com/javafx/8.0.241" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.issueBookController">
+    <children>
+            <AnchorPane fx:id="parentNode">
+               <children>
+                       <VBox alignment="TOP_CENTER" prefHeight="531.0" prefWidth="700.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+   
+                       <children>
+                  <JFXTextField fx:id="searchBook" promptText="Search Book">
+                     <font>
+                        <Font name="Yu Gothic Regular" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                           <HBox fx:id="bookInfo" alignment="CENTER" prefHeight="250.0" prefWidth="700.0" style="-fx-background-color: #2A2E37;" VBox.vgrow="ALWAYS">
+                               <children>
+                                   <TableView fx:id="bookListView" prefHeight="140.0" prefWidth="700.0" HBox.hgrow="ALWAYS">
+                                       <columns>
+                                           <TableColumn fx:id="bookID" maxWidth="1.0" minWidth="1.0" prefWidth="1.0" resizable="false" />
+                                           <TableColumn fx:id="titleCol" maxWidth="400.0" minWidth="100.0" prefWidth="250.0" text="Book Title" />
+                                           <TableColumn fx:id="authorCol" maxWidth="300.0" minWidth="100.0" prefWidth="200.0" text="Author" />
+                                           <TableColumn fx:id="editionCol" maxWidth="300.0" minWidth="80.0" prefWidth="200.0" text="Edition" />
+                                           <TableColumn fx:id="catCol" maxWidth="200.0" minWidth="80.0" prefWidth="150.0" text="Category" />
+                                           <TableColumn fx:id="copiesCol" maxWidth="150.0" minWidth="30.0" text="copies" />
+                                       </columns>
+                                   </TableView>
+                               </children>
+                               <padding>
+                                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                               </padding>
+                               <VBox.margin>
+                                   <Insets />
+                               </VBox.margin>
+                           </HBox>
+                  <JFXTextField fx:id="searchMember" promptText="Search Member">
+                     <font>
+                        <Font name="Yu Gothic Regular" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                           <HBox fx:id="memberInfo" alignment="CENTER" prefHeight="250.0" prefWidth="700.0" style="-fx-background-color: #2A2E37;" VBox.vgrow="ALWAYS">
+                               <children>
+                                   <TableView fx:id="memberListView" prefHeight="140.0" prefWidth="700.0" HBox.hgrow="ALWAYS">
+                                       <columns>
+                                           <TableColumn fx:id="memberID" maxWidth="1.0" minWidth="1.0" prefWidth="1.0" resizable="false" />
+                                           <TableColumn fx:id="fNameCol" maxWidth="500.0" minWidth="100.0" prefWidth="200.0" text="First Name" />
+                                           <TableColumn fx:id="lNameCol" maxWidth="500.0" minWidth="100.0" prefWidth="200.0" text="Last Name" />
+                                           <TableColumn fx:id="phoneCol" maxWidth="500.0" minWidth="80.0" prefWidth="200.0" text="Phone" />
+                                           <TableColumn fx:id="emailCol" maxWidth="500.0" minWidth="80.0" prefWidth="200.0" text="Email" />
+                                           <TableColumn fx:id="rentedCol" maxWidth="150.0" minWidth="50.0" text="Rented" />
+                                       </columns>
+                                   </TableView>
+                               </children>
+                               <padding>
+                                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                               </padding>
+                               <VBox.margin>
+                                   <Insets />
+                               </VBox.margin>
+                           </HBox>
+                           <HBox alignment="CENTER" maxHeight="100.0" prefHeight="100.0" prefWidth="700.0" VBox.vgrow="ALWAYS">
+                               <children>
+                                   <JFXButton mnemonicParsing="false" onAction="#issueBookOperation" prefHeight="40.0" prefWidth="180.0" styleClass="opBtn" stylesheets="@../resources/stylesheets/mainTheme.css" text="Issue Book">
+                                       <font>
+                                           <Font name="Yu Gothic Regular" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                           <Insets />
+                                       </HBox.margin>
+                                   </JFXButton>
+                               </children>
+                               <padding>
+                                   <Insets bottom="25.0" />
+                               </padding>
+                           </HBox>
+                       </children>
+                   </VBox>
+               </children>
+            </AnchorPane>
+    </children>
+</StackPane>
