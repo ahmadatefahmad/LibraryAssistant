@@ -3,14 +3,15 @@ Library Assistant Application built with JavaFx
 
 The default credentials created at the DB initialization are: admin/password
 
-later on, other users can be created, modified, or deleted
 
 
  ![Alt text](src/resources/githubIMG/e-libraryAppLogin.png?raw=true "Title")
 
 
-Main Page of the app shows number of books, members and books issued to members, along side the user logged in name.
+Main Page of the app shows the number of books, members and books issued to members, along side the user logged in name.
 On the left is the dashboard, allowing the user to add books, members, issue books and return books or renvew their issuance.
+
+logged in user can edit his credentials, delete his account, or create another account
 
 In the members and books tabs, you can edit or delete books and members through a context menu.
 
